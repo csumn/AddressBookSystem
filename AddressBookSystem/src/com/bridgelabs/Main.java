@@ -11,7 +11,7 @@ public class Main {
 		while (!isExit)
 		{
 			Scanner sc = new Scanner(System.in);
-			System.out.println("Select any option from below \n \n 1.Add Contact.\n 2.Edit Contact.\n 3.Display Contact \n 4.Exit");
+			System.out.println("Select any option from below \n 1.Add Contact.\n 2.Edit Contact.\n 3.Delete Contact \n 4.Display Contact \n 5.Exit");
 			int input = sc.nextInt();
 			switch (input)
 			{
@@ -23,9 +23,12 @@ public class Main {
 				obj.editContact();
 				break;
 			case 3:
-				obj.displayList();
+				obj.deleteContact();
 				break;
 			case 4:
+				obj.displayList();
+				break;
+			case 5:
 				isExit = true;
 				break;
 			default:

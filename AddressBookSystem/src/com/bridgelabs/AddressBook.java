@@ -8,7 +8,6 @@ public class AddressBook {
 	ArrayList<Contacts> contactlist = new ArrayList<>();
 
 	public void addNewContact()
-
 	{
 		Contacts contact = new Contacts();
 		System.out.println("Enter First name:");
@@ -39,13 +38,13 @@ public class AddressBook {
 		System.out.println("Contact Added Successfully");
 	}
 	public void editContact()
-	{
-		String enteredFirstName;
+	{	if( contactlist.size()>0) {
+		String newFirstName;
 		System.out.println("Enter First name of contact to edit it ");
-		enteredFirstName = sc.next();
+		newFirstName = sc.next();
 		for (int i = 0; i < contactlist.size(); i++) 
 		{
-			if (contactlist.get(i).getFirstName().equals(enteredFirstName))
+			if (contactlist.get(i).getFirstName().equals(newFirstName))
 			{
 				System.out.println("Enter the field to edit:\n1.First Name\n2.Last Name\n3.Address\n4.city\n5.State\n6.Zip\n7.Phone\n8.Email");
 				int input = sc.nextInt();
@@ -90,13 +89,33 @@ public class AddressBook {
 			} else 
 				System.out.println("Contact doesn't exist");
 		}
-	}
-	public void displayList() 
-	{
-		for (Contacts iterator : contactlist)
-		{
-			System.out.println(iterator);
-		}
+	}else System.out.println("There are no contacts as of now.....");
 	}
 
+	public void deleteContact() {
+		if( contactlist.size()>0) {
+			System.out.println("Enter the firstName of the contact which you want to delete ");
+			String delName = sc.next();
+			for ( int i =0; i< contactlist.size(); i++) {
+				if(contactlist.get(i).getFirstName().equals(delName))
+				{
+					Contacts contact = contactlist.get(i);
+					contactlist.remove(contact);
+					System.out.println("Contact deleted Successfully...");
+				}
+				else
+					System.out.println("No such contact exist here....");
+			}
+		}else System.out.println("There are no contacts as of now ......");
+
+	}
+	public void displayList() {
+		{	if( contactlist.size()>0) {
+			for (Contacts iterator : contactlist)
+			{
+				System.out.println(iterator);
+			}
+		}else System.out.println("There are no contacts here as of now .....");
+		}
+	}
 }

@@ -9,7 +9,7 @@ public class Contacts {
 	private int ZipCode;
 	private String mobileNumber;
 	private String emailId;
-
+	
 	public String getFirstName() {
 		return firstName;
 	}
