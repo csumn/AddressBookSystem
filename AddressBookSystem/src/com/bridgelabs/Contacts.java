@@ -10,16 +10,6 @@ public class Contacts {
 	private String mobileNumber;
 	private String emailId;
 
-	public Contacts(String firstName, String lastName, String address, String city, String state, int zipCode, String mobileNumber, String emailId) {
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.address = address;
-		this.city = city;
-		this.state = state;
-		this.ZipCode = zipCode;
-		this.mobileNumber = mobileNumber;
-		this.emailId = emailId;
-	}
 	public String getFirstName() {
 		return firstName;
 	}
