@@ -36,7 +36,7 @@ public class AddressBook {
 
 		contactlist.add(contact);
 		System.out.println("Contact Added Successfully");
-	}
+    
 	public void editContact()
 	{	if( contactlist.size()>0) {
 		String newFirstName;
@@ -116,6 +116,6 @@ public class AddressBook {
 				System.out.println(iterator);
 			}
 		}else System.out.println("There are no contacts here as of now .....");
-		}
 	}
-}
+  }
+  }
