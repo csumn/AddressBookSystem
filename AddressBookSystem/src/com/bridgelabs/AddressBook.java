@@ -8,7 +8,7 @@ public class AddressBook {
 	ArrayList<Contacts> contactlist = new ArrayList<>();
 
 	public void addNewContact()
-	
+
 	{
 		Contacts contact = new Contacts();
 		System.out.println("Enter First name:");
